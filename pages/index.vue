@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <h1 align="center"><span class="pinkman">Pinkman</span> home work</h1>
-    <Filters :filterCountry="filterCountry" :filterGender="filterGender" />
     <Table :persons="persons" />
   </div>
 </template>
@@ -16,24 +15,24 @@ export default {
       persons: MOCK_DATA,
     }
   },
-  methods: {
-    filterCountry(filterCountry) {
-      this.persons = MOCK_DATA
-      if (filterCountry !== 'All') {
-        this.persons = this.persons.filter((person) => {
-          return person.country === filterCountry
-        })
-      }
-    },
-    filterGender(filterGender) {
-      this.persons = this.filterCountry(filterCountry)
-      if (filterGender !== 'All') {
-        this.persons = this.persons.filter((person) => {
-          return person.gender === filterGender
-        })
-      }
-    },
-  },
+  // methods: {
+  //   filterCountry(filterCountry) {
+  //     this.persons = MOCK_DATA
+  //     if (filterCountry !== 'All') {
+  //       this.persons = this.persons.filter((person) => {
+  //         return person.country === filterCountry
+  //       })
+  //     }
+  //   },
+  //   filterGender(filterGender) {
+  //     this.persons = this.filterCountry(filterCountry)
+  //     if (filterGender !== 'All') {
+  //       this.persons = this.persons.filter((person) => {
+  //         return person.gender === filterGender
+  //       })
+  //     }
+  //   },
+  // },
 }
 </script>
 
